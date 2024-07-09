@@ -31,7 +31,7 @@ class Post(BaseModel):
     description = models.TextField(verbose_name=_("description"))
     article = models.CharField(max_length=255, verbose_name=_("article"))
     tag = models.ManyToManyField("Tags", verbose_name=_("tag"), related_name="posts")
-    image = models.ImageField(upload_to='media/', verbose_name=_("image"))
+   # image = models.ImageField(upload_to='media/', verbose_name=_("image"))
 
     def __str__(self) -> str:
         return f"{self.title[:15]}"
